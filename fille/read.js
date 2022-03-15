@@ -1,5 +1,4 @@
 const fs = require("fs")
-var jay="Hello jay ho"  
 fs.readFile("rea.txt","utf8",write)
 function write(err){
     if(err){
