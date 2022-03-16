@@ -2,6 +2,7 @@ const http = require('http')
 const fs = require('fs')
 
 let app = http.createServer((req,res)=>{
+
     fs.readFile("xyz.txt","utf8",function(err,data){
         if(err){
             res.statusCode(500)
