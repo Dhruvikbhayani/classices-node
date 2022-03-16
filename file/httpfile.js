@@ -6,7 +6,7 @@ let app = http.createServer((req,res)=>{
         if(err){
             res.statusCode(500)
             res.write("unable to read")
-            res.end()
+            res.end();
         }
         else{
             res.write(data);
