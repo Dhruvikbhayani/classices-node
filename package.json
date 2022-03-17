@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Dhruvikbhayani/classices-node#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "mongoose": "^6.2.7",
     "nodemon": "^2.0.15"
   }
 }
