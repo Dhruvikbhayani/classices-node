@@ -10,6 +10,7 @@ let app = http.createServer((req, res) => {
             res.end();
         }
         else {
+            
             res.write(data);
             res.end();
         }
