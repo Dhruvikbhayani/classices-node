@@ -5,7 +5,7 @@ let app = http.createServer((req, res) => {
 
     fs.readFile("xyz.txt", "utf8", function (err, data) {
         if (err) {
-            res.statusCode(500)
+            res.writeHead(500)
             res.write("unable to read")
             res.end();
         }
