@@ -1,5 +1,4 @@
 const mongoose=require('mongoose')
-
 const emschema= new mongoose.Schema({name:String,age:Number,address:String});
 const emmodel=mongoose.model("emploee",emschema)
 mongoose.connect("mongodb://localhost/skillqode")
