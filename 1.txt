@@ -1,0 +1,31 @@
+1). What is library?
+--> js API library module is available from the npmjs.org registry, and npm is used to retrieve it.npm is a package manager for Node. js packages 
+and modules and is installed on your computer when you install Node. js. npm can install packages and modules from a file system, a URL or the 
+npmjs registry.
+
+
+2).What is a Node Framework? 
+--> A framework is a collection of various libraries and tools that are required in the development process of a software application. It acts as 
+a base on which different software applications can be developed. A node framework is a workspace platform that supports the use of Node.js and 
+which allows developers to use JavaScript for developing front end as well as the back end of an application. Node frameworks are a wide 
+collection of frameworks built on Node and that extend its properties and functionalities further. 
+
+
+3).Node Frameworks? 
+-->	*Express.js- Express for Everyone
+	*Koa.js- Next Generation Node.js Framework
+	*Meteor.js- One Application, One Language
+	*Socket.io- Chat Apps Made Easy with Socket.io
+	*Nest.js- A Nestling of Code
+	*Sails.js- Modernized Data-Oriented MVC Framework 
+	*Total.js- A Complete Framework
+	*Hapi.js- Secure than Ever
+	*Feather.js- F for Flexible
+	*Loopback.js- Better Connectivity
+	*Adonis.js-The Dependable Framework
+	*Derby.js-The Racer
+
+4).What is difference between framework and library
+The key difference between JavaScript libraries and frameworks is that libraries consist of functions that an application can call to perform a 
+task, while a framework defines how a developer designs an application. In other words, the framework calls on the application code, rather than 
+the other way around.
