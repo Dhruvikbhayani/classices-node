@@ -18,6 +18,6 @@ const server = http.createServer((req, res) => {
         })
     }
 })
-server.listen(5050, () => {
+server.listen(5080, () => {
     console.log("server is run")
 })
