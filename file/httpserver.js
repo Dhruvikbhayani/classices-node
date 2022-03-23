@@ -6,7 +6,7 @@ const server=http.createServer((req,res)=>{
     console.log(qureryobject)
     const uname=qureryobject.uname
     const upwd=qureryobject.upwd
-    uname==="skill" || upwd==="qode"?res.write("<h1>login success</h1>"): res.write("<h1>login file</h1>")
+    uname==="skill" && upwd==="qode"?res.write("<h1>login success</h1>"): res.write("<h1>login file</h1>")
     res.end()
 })
 
