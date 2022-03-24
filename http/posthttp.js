@@ -4,20 +4,21 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "content-type": "text/html" })
     if (req.method == "post") {
         var postparametes = "";
-        req.on("data", function() {
+        req.on('data', function() {
             postparametes += data;
         });
-        req.on("end", function() {
+        req.on('end', function() {
             var postdata = querystring.parse(postparametes)
-            console.log(postdata)
-            if (postdata['uname'] == "skill" && postdata["upwd"] == "qode") {
+                // console.log(postdata)
+            if (postdata['uname'] == "skill") {
                 res.write("<h1>Login success</h1>")
             } else {
                 res.write("<h1>login fail</h1>")
             }
+            res.end()
         })
     }
-})
-server.listen(5080, () => {
+});
+server.listen(5555, () => {
     console.log("server is run")
 })
