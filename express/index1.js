@@ -1,30 +1,29 @@
 const express = require('express')
-const res = require('express/lib/response')
 const app = express()
-app.listen(5011, () => {
+app.listen(5012, () => {
     console.log("port is run")
 })
-app.get("/", () => {
+app.get("/", (req, res) => {
     res.json({ "message": "welcome to get" })
 })
-app.get("/products", () => {
+app.get("/products", (req, res) => {
     res.json({ "message": "welcome to get products" })
 })
-app.post("/", () => {
+app.post("/", (req, res) => {
     res.json({ "message": "welcome to post " })
 })
-app.post("/products", () => {
+app.post("/products", (req, res) => {
     res.json({ "message": "welcome to post products" })
 })
-app.head("/", () => {
+app.head("/", (req, res) => {
     res.json({ "message": "welcome to head " })
 })
-app.head("/products", () => {
+app.head("/products", (req, res) => {
     res.json({ "message": "welcome to head products" })
 })
-app.delete("/", () => {
+app.delete("/", (req, res) => {
     res.json({ "message": "welcome to delete" })
 })
-app.delete("/products", () => {
+app.delete("/products", (req, res) => {
     res.json({ "message": "welcome to get" })
 })
