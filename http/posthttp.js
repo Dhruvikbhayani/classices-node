@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
         });
         req.on('end', function() {
             var postdata = querystring.parse(postparametes)
-                // console.log(postdata)
+            console.log(postdata)
             if (postdata['uname'] == "a" && postdata['upwd'] == "b") {
                 res.write("<h1>Login success</h1>")
             } else {
@@ -19,6 +19,6 @@ const server = http.createServer((req, res) => {
         })
     }
 });
-server.listen(5500, () => {
+server.listen(5555, () => {
     console.log("server is run")
 })
