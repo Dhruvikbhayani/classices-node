@@ -4,7 +4,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "content-type": "text/html" })
     if (req.method == "post") {
         var postparametes = "";
-        req.on('data', function() {
+        req.on('data', function(data) {
             postparametes += data;
         });
         req.on('end', function() {
