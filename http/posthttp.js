@@ -2,7 +2,7 @@ const http = require('http')
 const querystring = require('querystring')
 const server = http.createServer((req, res) => {
     res.writeHead(200, { "content-type": "text/html" })
-    if (req.method == "post") {
+    if (req.method == "POST") {
         var postparametes = "";
         req.on('data', function(data) {
             postparametes += data;
