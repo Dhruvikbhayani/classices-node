@@ -13,4 +13,9 @@ app.get("/home", function(req, res) {
     // console.log("req.query", req.query)
     // console.log("req.body", req.body)
 
+    //     res.header()
+    //     res.write("Hello World")
+    //     res.end()
+    //     res.send("Hello welcome to skill qode")
+    //     res.sendFile(__dirname + "logic.js")
 })
