@@ -1,12 +1,12 @@
 // http://localhost:8400/?uname=skill&upwd=qode
 const express = require("express")
-const url = require('url')
 const app = express()
-app.listen(8400, () => {
-    console.log(`this port is run 8400`)
+app.listen(8401, () => {
+    console.log(`this port is run 8401`)
 })
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "form.html")
+    res.sendFile(__dirname + '/form.html')
+
 })
 app.get("/login", (req, res) => {
     var name = req.query.uname
