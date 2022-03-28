@@ -13,4 +13,4 @@ function after(err) {
     }
     mongoose.disconnect();
 }
-newemp.upate({ name: "jainam" }, { $set: {} })
+// newemp.upate({ name: "jainam" }, { $set: {} })
