@@ -8,6 +8,7 @@ let managermodule = require('./manager')
 app.use("/user", usermodule)
 app.use('/admin', adminmodule)
 app.use('/manager', managermodule)
+
 app.listen(port, () => {
     console.log(`server is run port ${port}`)
 })
