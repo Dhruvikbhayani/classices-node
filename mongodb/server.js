@@ -18,7 +18,7 @@ app.post("/insert", (req, res) => {
     // const result = user.insertMany(data.users)
     // res.send(result)
 
-    user.save().then((err, data) => {
+    user.Save({}).then((err, data) => {
         if (err) {
             console.log(err)
         } else {
@@ -28,11 +28,11 @@ app.post("/insert", (req, res) => {
     mongoose.disconnect()
 })
 
-app.get("/insert", (req, res) => {
-    // const result = user.insertMany(data.users)
-    // res.send(result)
-    mongoose.disconnect()
-})
+// app.get("/insert", (req, res) => {
+//     // const result = user.insertMany(data.users)
+//     // res.send(result)
+//     mongoose.disconnect()
+// })
 
 app.listen(port, () => {
     console.log(`srever is running port ${port}`)
