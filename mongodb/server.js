@@ -5,8 +5,6 @@ const data = require("./data")
 const user = require('./usermodel')
 const port = 2021
 const bodyparase = require('body-parser')
-const { use } = require('express/lib/application')
-const { users } = require('./data')
 app.use(bodyparase.json())
 app.use(express.json())
     // const cors = require('cors')
@@ -32,9 +30,9 @@ app.get("/insert", (req, res) => {
     })
     mongoose.disconnect()
 })
-app.get("/user", (req, res) => {
-    user.find().select("name").then((data) => res.json(data))
-        // user.find().then((data) => res.json(data))
+app.get("/user/", (req, res) => {
+    // user.find().select("name").then((data) => res.json(data))
+    user.find(req.query).then((data) => res.json(data))
 })
 
 app.post("/insert", (req, res) => {
