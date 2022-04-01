@@ -14,17 +14,18 @@ mongoose.connect("mongodb://localhost:27017/dhruvik", {
     useUnifiedTopology: true
 })
 
-app.post("/insert", (req, res) => {
+app.get("/insert", (req, res) => {
     // const result = user.insertMany(data.users)
     // res.send(result)
 
-    user.Save({}).then((err, data) => {
+    var a = user.Save().then((err, data) => {
         if (err) {
             console.log(err)
         } else {
-            res.json(data)
+            console.log(data)
         }
     })
+    res.send(a)
     mongoose.disconnect()
 })
 
