@@ -19,6 +19,13 @@
                     <%}else{%>
                         fail
                         <%}%>
+
+                            <% for(var i=0;i<subject.length;i++){%>
+                                <li>
+                                    <%=subject[i].name%>
+                                        <%=subject[i].marks%>
+                                </li>
+                                <%}%>
 </body>
 
 </html>
