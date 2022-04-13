@@ -6,7 +6,6 @@ const hbs = require('hbs')
 
 app.set('view engine', 'hbs')
 
-
 app.get("/", (req, res) => {
     var model = {
         studentid: "501",
