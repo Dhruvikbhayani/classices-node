@@ -1,0 +1,25 @@
+doctype html 
+html 
+    head 
+        title pug 
+    body 
+        h3 student Detalis 
+        p 
+            span studentid:#{studentid} 
+            br
+            span studentname:#{studentname} 
+            br
+            span studentmarks:#{studentmarks}
+            br
+        table(border="1")
+            tr 
+                th  name
+                th marks 
+            for s in subject
+                tr
+                    td #{s.name}
+                    td=s.marks
+
+
+        include seach
+
