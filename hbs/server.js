@@ -1,10 +1,13 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 const hbs = require('hbs')
     // let compiled = hbs.precompile(template)
 
-
 app.set('view engine', 'hbs')
+const partials_path = path.join(__dirname, "./partials");
+
+hbs.registerPartials(partials_path);
 
 
 app.get("/", (req, res) => {
