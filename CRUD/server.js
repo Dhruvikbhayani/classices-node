@@ -12,6 +12,11 @@ app.use(express.json())
 const module1 = require('./getmethod')
 app.use("/product", module1)
 
+const module2 = require('./postmethod')
+app.use("/post", module2)
+
+
+
 const port = process.env.PORT || 5010
 app.listen(port, () => {
     console.log(`srever is run ${port}`)
