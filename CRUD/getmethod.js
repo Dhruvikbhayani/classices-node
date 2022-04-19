@@ -11,7 +11,7 @@ module1.get("/", (req, res) => {
                 useNewUrlParser: true,
                 useUnifiedTopology: true
             });
-            console.log(db)
+
             db.collection(process.env.COLLECTION_NAME).find().toArray((err, data) => {
                 if (err) throw err
                 else {
