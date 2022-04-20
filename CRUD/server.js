@@ -15,7 +15,11 @@ app.use("/product", module1)
 const module2 = require('./postmethod')
 app.use("/post", module2)
 
+const module3 = require('./update')
+app.use("/update", module3)
 
+const module4 = require('./delete')
+app.use("/delete", module4)
 
 const port = process.env.PORT || 5010
 app.listen(port, () => {

@@ -21,6 +21,7 @@ module2.post("/", (req, res) => {
                 if (err) throw err
                 else {
                     res.send("data is insert")
+
                 }
             })
         }
