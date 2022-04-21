@@ -8,7 +8,7 @@ var filestorange = multer.diskStorage({
     },
     filename: function(req, file, cb) {
         // cb(null, file.fieldname + '_' + Date.now() + file.originalname)
-        cb(null, file.origin2alname)
+        cb(null, file.originalname)
     }
 })
 var uploads = multer({ storage: filestorange })

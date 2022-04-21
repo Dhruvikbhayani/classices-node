@@ -12,6 +12,9 @@ app.use(express.json())
 const module1 = require('./getmethod')
 app.use("/product", module1)
 
+const mongoexpressreq = require('mongo-express-req')
+app.use(mongoexpressreq(process.env.CONNECTION_URL))
+
 const module2 = require('./postmethod')
 app.use("/post", module2)
 
