@@ -3,7 +3,7 @@ const mongodb = require('mongodb')
 const module3 = express.Router()
 const skill = mongodb.MongoClient
 
-module3.put("/", (req, res) => {
+module3.put("/", (req, res, next) => {
     const connections = req.db
     const db = connections.db(process.env.DATABASE_NAME, {
         useNewUrlParser: true,

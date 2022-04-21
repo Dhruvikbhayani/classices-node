@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const skill = mongodb.MongoClient
 const module2 = express.Router()
 
-module2.post("/", (req, res) => {
+module2.post("/", (req, res, next) => {
 
     const data = {
         "_id": new mongoose.Types.ObjectId(),

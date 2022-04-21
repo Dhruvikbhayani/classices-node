@@ -3,7 +3,7 @@ const mongodb = require('mongodb')
 const module4 = express.Router()
 const skill = mongodb.MongoClient
 
-module4.delete("/", (req, res) => {
+module4.delete("/", (req, res, next) => {
     const connections = req.db
     const db = connections.db(process.env.DATABASE_NAME, {
         useNewUrlParser: true,
