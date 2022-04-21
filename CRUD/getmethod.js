@@ -1,9 +1,10 @@
 const express = require('express')
 const module1 = express.Router()
 const mongodb = require('mongodb')
-const skill = mongodb.MongoClient
+    // const skill = mongodb.MongoClient
 
 module1.get("/", (req, res, next) => {
+
     const connections = req.db
     const db = connections.db(process.env.DATABASE_NAME, {
         useNewUrlParser: true,
@@ -17,7 +18,6 @@ module1.get("/", (req, res, next) => {
                 // console.log(db)
         }
     })
-
 })
 
 

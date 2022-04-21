@@ -9,11 +9,12 @@ app.use(cors())
 
 app.use(express.json())
 
+var mongoexpressreq = require("mongo-express-req")
+app.use(mongoexpressreq(process.env.CONNECTION_URL))
+
 const module1 = require('./getmethod')
 app.use("/product", module1)
 
-const mongoexpressreq = require('mongo-express-req')
-app.use(mongoexpressreq(process.env.CONNECTION_URL))
 
 const module2 = require('./postmethod')
 app.use("/post", module2)
