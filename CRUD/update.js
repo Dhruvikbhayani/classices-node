@@ -6,10 +6,11 @@ const skill = mongodb.MongoClient
 module3.put("/", (req, res, next) => {
     const connections = req.db
     const db = connections.db(process.env.DATABASE_NAME, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
-    db.collection(process.env.COLLECTION_NAME).updateOne({ "name": req.body.name }, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
+        // db.collection(process.env.COLLECTION_NAME).updateOne({ "name": req.body.name }, {
+    db.collection(process.env.COLLECTION_NAME).updateMany({ "name": req.body.name }, {
         $set: {
             "name": req.body.name,
             "age": req.body.age,

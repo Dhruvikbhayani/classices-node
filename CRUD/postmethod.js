@@ -17,7 +17,7 @@ module2.post("/", (req, res, next) => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    db.collection(process.env.COLLECTION_NAME).insertOne(data, (err, result) => {
+    db.collection(process.env.COLLECTION_NAME).insertMany(req.body, (err, result) => {
         if (err) throw err
         else {
             res.send("data is insert")
