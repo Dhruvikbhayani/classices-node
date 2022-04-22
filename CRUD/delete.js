@@ -13,7 +13,7 @@ module4.delete("/", (req, res, next) => {
         if (err) throw err;
         else {
             res.send("Data is delete")
-            console.log(db)
+
         }
 
     })
