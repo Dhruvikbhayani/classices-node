@@ -7,7 +7,7 @@ const module2 = express.Router()
 module2.post("/", (req, res, next) => {
 
     const data = {
-        "_id": new mongoose.Types.ObjectId(),
+
         "name": req.body.name,
         "age": req.body.age,
         "email": req.body.email
@@ -17,7 +17,7 @@ module2.post("/", (req, res, next) => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    db.collection(process.env.COLLECTION_NAME).insertOne(data, (err, result) => {
+    db.collection(process.env.COLLECTION_NAME).insertMany([data], (err, result) => {
         if (err) throw err
         else {
             res.send("data is insert")
