@@ -1,7 +1,15 @@
-const express = require('express')
+const express = require('express');
+
 const app = express()
 app.use(express.json())
+const mongoose = require('mongoose')
+const users = require('./tranmodel')
 const mysql = require('mysql');
+
+mongoose.connect('mongodb://localhost:27017/trandata', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
 
 var con = mysql.createConnection({
     host: "localhost",
@@ -19,7 +27,11 @@ app.get("/get", (req, res) => {
 
     let query = con.query(sql, (err, results) => {
         if (err) throw err;
-        res.send(results);
+
+        users.insertMany(results).then((data => {
+                console.log(data)
+            }))
+            // console.log(results) // res.send(results);
     });
 
 })
